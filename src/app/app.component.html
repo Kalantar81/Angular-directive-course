@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Angular Directives</h1>
+
+  <!-- the same as [appStyle]="'red'"   This way works with all data(objects, arrays...) and the second only with strings -->
+  <p appStyle="red" [dStyles]="{border: '1px solid blue', borderRadius: '5px'}">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, laborum!
+  </p>
+  <p appStyle="blue" [dStyles]="{border: '1px solid blue', borderRadius: '5px'}">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, laborum!
+  </p>
+
+  <button class="btn" (click)="isVisible = !isVisible">
+    Toggle
+  </button>
+
+  <!-- <ng-template [appIfnot]="!isVisible" class="wrap">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia deserunt nulla fuga reprehenderit praesentium aliquid dolorum quam itaque illo dolorem.</p>
+  </ng-template> -->
+
+  <div *appIfnot="!isVisible" class="wrap">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia deserunt nulla fuga reprehenderit praesentium aliquid dolorum quam itaque illo dolorem.</p>
+  </div>
+</div>
+
+
